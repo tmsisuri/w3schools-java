@@ -43,6 +43,30 @@ public class DateAndTime {
         String formattedDate = myDateTime2.format(myDateTimeFormatter);
         System.out.println("After formatting : " + formattedDate);
 
+        //The ofPattern() method accepts all sorts of values, if you want to display the date and time in a different format
+
+        //   Value	             Example	
+        //   yyyy-MM-dd	         "1988-09-29"	
+        //   dd/MM/yyyy	         "29/09/1988"	
+        //   dd-MMM-yyyy	     "29-Sep-1988"	
+        //   E, MMM dd yyyy   	 "Thu, Sep 29 1988"
+
+        DateTimeFormatter obj1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String dateTime1 = obj1.format(myDateTime2);
+        System.out.println(dateTime1);
+
+        DateTimeFormatter obj2 = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String dateTime2 = obj2.format(myDateTime2);
+        System.out.println(dateTime2);
+
+        DateTimeFormatter obj3 = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+        String dateTime3 = obj3.format(myDateTime2);
+        System.out.println(dateTime3);
+
+        DateTimeFormatter obj4 = DateTimeFormatter.ofPattern("yyyy-MM-dd, E");
+        String dateTime4 = obj4.format(myDateTime2);
+        System.out.println(dateTime4);
+
       
     }
 }
