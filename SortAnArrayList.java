@@ -16,5 +16,22 @@ public class SortAnArrayList {
         for(String i : cars) {
             System.out.println(i);
         }
+
+        //Sort an ArrayList of Integers
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(33);
+        numbers.add(42);
+        numbers.add(12);
+        numbers.add(123);
+        numbers.add(2);
+        numbers.add(21);
+        numbers.add(15);
+        numbers.add(4);
+
+        Collections.sort(numbers);
+        for(int j : numbers) {
+            System.out.println(j);
+        }
+
     }
 }
